@@ -1,0 +1,62 @@
+/* professions.css */
+:root {
+    --primary-color: #fff;
+    --secondary-color: #333;
+    --main-color: #754ef9;
+  }
+  
+
+  
+  .profession-box {
+    opacity: 0;
+    animation: slideLeft 1s ease forwards, professionRotate 13s ease-out infinite;
+    animation-delay: 2.5s, 3.5s;
+  }
+  
+  .profession {
+    transform-origin: 384px;
+    transform: rotate(calc(360deg / 4 * var(--i)));
+  }
+  
+
+  .profession-box .profession:nth-child(1) span {
+    margin-right: 15px;
+}
+
+.profession-box .profession:nth-child(2) span {
+    padding-bottom: 20px;
+}
+
+.profession-box .profession:nth-child(4) span {
+    padding-bottom: 20px;
+}
+
+
+  @keyframes slideLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes professionRotate {
+    0%, 20% {
+      transform: rotate(0deg);
+    }
+    25%, 45% {
+      transform: rotate(-90deg);
+    }
+    50%, 70% {
+      transform: rotate(-180deg);
+    }
+    75%, 95% {
+      transform: rotate(-270deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
